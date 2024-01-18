@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="utils/jquery-3.7.1.min.js"></script>
+    <script src="ol_8_1/ol.js"></script>
+    <link rel="stylesheet" href="ol_8_1/ol.css" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="main.css" />
+
+    <title>GeoCollector - Application</title>
+  </head>
+
+  <body>
+    <div id="map-container">
+      <div id="header">
+        <div></div>
+      </div>
+
+      <div class="ol-control drawBtndiv">
+        <button id="drawBtn" data-toggle="collapse" data-target="#drawcoll">
+          <i class="fa fa-pencil"></i>
+        </button>
+        <div id="drawcoll" class="collapse">
+          <!-- <button id="drawUndo"><i class="fa fa-reply"></i></button>
+          <button id="drawModify"><i class="fa fa-pencil"></i></button> -->
+          <!-- <button id="drawSave">
+            <i class="fa fa-floppy-o"></i>
+          </button> -->
+        </div>
+      </div>
+
+      <div id="drawObjSelect">
+        <select id="objTypeSelect">
+          <option value="defult">Select form</option>
+        </select>
+
+        <!-- <select id="objNetworkTypeSelect"></select> -->
+      </div>
+    </div>
+
+    <!-- alert templet -->
+    <div class="alert alert-success" id="success-alert" style="display: none">
+      <button type="button" class="close" data-dismiss="alert">✖</button>
+      <strong>Success! </strong> <span id="successmsg">Messages</span>
+    </div>
+    <div class="alert alert-warning" id="warning-alert" style="display: none">
+      <button type="button" class="close" data-dismiss="alert">✖</button>
+      <strong>Warning! </strong> <span id="warningmsg">Messages</span>
+    </div>
+
+    <div id="popup" class="ol-popup">
+      <!-- <a href="#" id="popup-closer" class="ol-popup-closer"></a> -->
+      <div id="popup-content"></div>
+    </div>
+
+    <script src="main.js"></script>
+    <script src="utils/utilty.js"></script>
+    <script src="tool/loadDataModel.js"></script>
+    <script src="utils/defultStyle.js"></script>
+    <script src="tool/popup.js"></script>
+    <script src="tool/alert.js"></script>
+    <script src="tool/draw.js"></script>
+    <script src="utils/previousFill.js"></script>
+    <script src="utils/saveLocal.js"></script>
+    <script src="utils/FileSaver.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  </body>
+</html>
